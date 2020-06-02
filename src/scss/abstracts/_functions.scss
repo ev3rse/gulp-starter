@@ -1,0 +1,19 @@
+//Delete px/percent... values
+@function strip-unit($value) {
+  @return ($value / ($value * 0 + 1));
+}
+//Convert every value in rem.
+//Default font-size is defined in variables.scss
+@function rem($pxval) {
+  @if not unitless($pxval) {
+    $pxval: strip-unit($pxval);
+  }
+
+  $base: $base-font-size-ec;
+  
+  @if not unitless($base) {
+    $base: strip-unit($base);
+  }
+
+  @return ($pxval / $base) * 1rem;
+}

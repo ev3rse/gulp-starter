@@ -1,0 +1,47 @@
+{
+  "name": "gulp-starter",
+  "version": "1.0.0",
+  "description": "Gulp 4 starter KIT",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ev3rse/gulp-starter.git"
+  },
+  "author": "ev3rse",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ev3rse/gulp-starter/issues"
+  },
+  "homepage": "https://github.com/ev3rse/gulp-starter#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-eslint": "^6.0.0",
+    "gulp-imagemin": "^6.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify-es": "^1.0.4",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "browserslist": [
+    "last 4 version"
+  ]
+}
