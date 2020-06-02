@@ -1,10 +1,3 @@
-## Node.js installation 
-To run gulp, you need to install Node.js, available here: https://nodejs.org/en/download/
-Run the following command to check if Node.js is correctly installed:
-```
-npm -v
-```
-
 ## Install dependencies
 
 Before running your gulp project you need to install the dependencies.
