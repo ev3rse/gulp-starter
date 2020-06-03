@@ -12,10 +12,11 @@ const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
 const eslint = require('gulp-eslint');
+const gulpPug = require('gulp-pug');
 
 const paths = {
-  html: {
-    src: 'src/**/*.html',
+  pug: {
+    src: 'src/**/*.pug',
     dest: 'dist',
   },
   css: {
@@ -47,9 +48,10 @@ function clean() {
   return del('dist/**', { force: true });
 }
 
-function html() {
-  return src(paths.html.src)
-    .pipe(dest(paths.html.dest));
+function pug() {
+  return src(paths.pug.src)
+    .pipe(gulpPug({ pretty: '\t' }))
+    .pipe(dest('dist/'));
 }
 
 function css() {
@@ -111,8 +113,8 @@ function watchCss() {
   return watch('src/scss/**/*.scss', css).on('change', browserSync.reload);
 }
 
-function watchHtml() {
-  return watch(paths.html.src, html).on('change', browserSync.reload);
+function watchPug() {
+  return watch(paths.pug.src, pug).on('change', browserSync.reload);
 }
 
 function watchJs() {
@@ -121,12 +123,12 @@ function watchJs() {
 
 
 // exports (public tasks)
-exports.build = series(clean, parallel(html, css, javascript, vendors, images, fonts));
+exports.build = series(clean, parallel(pug, css, javascript, vendors, images, fonts));
 exports.clean = clean;
-exports.html = html;
+exports.pug = pug;
 exports.css = css;
 exports.js = javascript;
 exports.vendors = vendors;
 exports.img = images;
 exports.fonts = fonts;
-exports.watch = parallel(watchCss, watchHtml, watchJs, browserLive);
+exports.watch = parallel(watchCss, watchPug, watchJs, browserLive);

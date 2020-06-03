@@ -1,12 +1,17 @@
 $grid-spacing: rem(24);
 
+html,
+body {
+  height: 100%;
+}
+
 @media screen and (min-width: $bp-tablet) {
   .row {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    margin-left: -$grid-spacing/2;
-    width: calc(100% + $grid-spacing/2);
+    margin-left: -$grid-spacing / 2;
+    width: calc(100% + $grid-spacing / 2);
   }
 
   .col-1 { width:(100% / 12) }
@@ -23,7 +28,7 @@ $grid-spacing: rem(24);
   .col-12 { width:100%; }
 
   *[class^="col-"] {
-    padding-left: $grid-spacing/2;
-    padding-right: $grid-spacing/2;
+    padding-left: $grid-spacing / 2;
+    padding-right: $grid-spacing / 2;
   }
 }

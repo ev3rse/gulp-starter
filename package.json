@@ -4,7 +4,8 @@
   "description": "Gulp 4 starter KIT",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp watch",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
@@ -30,16 +31,17 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
     "gulp-babel": "^8.0.0",
     "gulp-clean": "^0.4.0",
     "gulp-eslint": "^6.0.0",
     "gulp-imagemin": "^6.1.0",
     "gulp-newer": "^1.4.0",
     "gulp-rename": "^1.4.0",
+    "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.0.2",
-    "gulp-uglify-es": "^1.0.4",
-    "gulp-autoprefixer": "^6.1.0",
-    "gulp-sourcemaps": "^2.6.5"
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify-es": "^1.0.4"
   },
   "browserslist": [
     "last 4 version"
